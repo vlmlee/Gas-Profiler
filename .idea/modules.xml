@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/gasmeter.iml" filepath="$PROJECT_DIR$/.idea/gasmeter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../gasprofiler/.idea/gasprofiler.iml" filepath="$PROJECT_DIR$/../gasprofiler/.idea/gasprofiler.iml" />
     </modules>
   </component>
 </project>
