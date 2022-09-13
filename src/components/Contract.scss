@@ -1,0 +1,78 @@
+.contract-container {
+    width: 80%;
+    margin: 30px auto;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.contract-header {
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+
+    span.separator {
+        margin: 0 15px;
+        font-weight: lighter;
+        color: #ccc;
+    }
+
+    .trash-icon {
+        float: right;
+        position: relative;
+        right: -6px;
+        bottom: 7px;
+        height: 16px;
+        border: 1px solid #eee;
+        padding: 6px;
+        border-radius: 3px;
+
+        &:hover {
+            border: 1px solid #ccc;
+            background-color: #eee;
+        }
+
+        &:active {
+            border: 1px solid #ccc;
+            background-color: #ddd;
+        }
+    }
+}
+
+.contract-contents-container {
+    font-size: 12px;
+}
+
+.contract-contents-container pre {
+    margin: 0;
+}
+
+.contract-lines {
+
+}
+
+.contract-lines:hover {
+    background-color: #eee;
+}
+
+.contract-line, .contract-line-number {
+    display: inline-block;
+    padding: 3px 5px;
+}
+
+.contract-line-number {
+    color: #777;
+    border-right: 1px solid #eee;
+    min-width: 30px;
+    width: fit-content;
+    text-align: right;
+}
+
+.contract-line {
+    color: #333;
+}
+
+.contract-container .button {
+    float: right;
+}

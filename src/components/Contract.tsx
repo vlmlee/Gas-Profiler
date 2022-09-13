@@ -1,8 +1,16 @@
 import React from "react";
 import {useState} from "react";
-import "./Contract.css"
+import "./Contract.scss"
+import Button from "./Button";
 
-export default function Contract({ contract }: {contract: { name: string, contents: string }}) {
+interface Contract {
+    name: string;
+    contents: string;
+    size: number;
+    address: string;
+}
+
+export default function Contract({ contract }: {contract: Contract}) {
     const [contractContents, setContractContents] = useState(contract.contents);
     const rawString = JSON.stringify(contractContents);
     const lines = rawString.split('\\n');
@@ -21,13 +29,13 @@ export default function Contract({ contract }: {contract: { name: string, conten
 
     return <div className="contract-container">
         <div className="contract-header">
-            <span>{contract.name}</span>
-            <button>Remove Contract</button> // trash can icon
+            <span>{contract.name}</span> <span className={"separator"}>|</span>
+            <span>{numberOfLines - 1} lines</span> <span className={"separator"}>|</span>
+            <span> KB</span>
+            <img className={"trash-icon"} src={"/delete-10400.svg"}></img>
         </div>
         <div className="contract-contents-container">
-            <pre>{
-                renderRows()
-            }</pre>
+            <pre>{renderRows()}</pre>
         </div>
     </div>;
 }

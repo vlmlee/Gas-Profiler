@@ -1,14 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import {useState} from "react";
 import Contract from "./components/Contract";
+import {ethers} from "ethers";
+import Button from "./components/Button";
 
 function App() {
-  
-  const [contracts, setContracts] = useState([
-      {
-          name: "AccessControl",
-          contents: `// SPDX-License-Identifier: MIT
+    
+    const [contracts, setContracts] = useState([
+        {
+            name: "AccessControl",
+            contents: `// SPDX-License-Identifier: MIT
     pragma solidity ^0.8.0;
 
     abstract contract AccessControl is Context, IAccessControl, ERC165 {
@@ -131,19 +132,27 @@ function App() {
             }
         }
     }`},
-  ]);
-  
-  return (
-    <div className="App">
-      <div>
-        <h1 className="header">Gas Profiler</h1>
-        <button>Load Contracts</button>
-      </div>
-      <div>
-        {contracts.map((contract, index) => <Contract key={index} contract={contract}/>)}
-      </div>
-    </div>
-  );
+    ]);
+    
+    const uploadFile = () => {
+        let file = document.getElementById("file").files[0];
+        let formData = new FormData();
+        formData.append("file", file)
+        fetch('/upload-contract', {method: "POST", body: formData});
+    }
+    
+    return (
+        <div className="App">
+            <header>
+                <h1 className="title">Gas Profiler</h1>
+                <Button onClick={uploadFile}>load contracts</Button>
+                <input type="file" name="file" id={"file"} />
+            </header>
+            <div>
+                {contracts.map((contract, index) => <Contract key={index} contract={contract}/>)}
+            </div>
+        </div>
+);
 }
 
 export default App;

@@ -1,0 +1,25 @@
+body {
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+header {
+  height: 60px;
+  width: 80%;
+  margin: 30px auto;
+
+  h1.title {
+    display: inline-block;
+    margin: 0;
+    float: left;
+  }
+
+  input[name="file"] {
+    float: right;
+  }
+
+  .button {
+    display: inline-block;
+    position: relative;
+    float: right;
+  }
+}
