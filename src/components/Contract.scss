@@ -2,11 +2,11 @@
     width: 80%;
     margin: 30px auto;
     text-align: left;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
 }
 
 .contract-header {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
     padding: 15px;
     font-size: 13px;
     font-weight: 600;
@@ -25,13 +25,13 @@
         right: -6px;
         bottom: 7px;
         height: 16px;
-        border: 1px solid #eee;
+        border: 1px solid #ccc;
         padding: 6px;
         border-radius: 3px;
 
         &:hover {
             border: 1px solid #ccc;
-            background-color: #eee;
+            background-color: #ddd;
         }
 
         &:active {
@@ -51,11 +51,13 @@
 }
 
 .contract-lines {
+    &:hover {
+        background-color: #ddd;
+    }
 
-}
-
-.contract-lines:hover {
-    background-color: #eee;
+    &:active {
+        background-color: #eee;
+    }
 }
 
 .contract-line, .contract-line-number {
@@ -65,7 +67,7 @@
 
 .contract-line-number {
     color: #777;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #ddd;
     min-width: 30px;
     width: fit-content;
     text-align: right;

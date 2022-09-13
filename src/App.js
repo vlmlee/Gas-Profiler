@@ -148,6 +148,9 @@ function App() {
                 <p>AccessControl.sol</p>
                 <p>AccessControl.sol</p>
                 <p>AccessControl.sol</p>
+                <div className={"sidebar-footer"}>
+                    <div className={"info"}>info</div>
+                </div>
             </div>
             <div className={"main"}>
                 <header>

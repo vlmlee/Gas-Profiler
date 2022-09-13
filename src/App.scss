@@ -37,10 +37,11 @@ header {
   .sidebar {
     flex-grow: 1;
     border-right: 1px solid #eee;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     box-shadow: 0 0 4px 0 #eee;
-    padding-top: 30px;
-    padding-left: 45px;
+    position: relative;
+    z-index: 0;
 
     h1 {
       font-size: 24px;
@@ -53,11 +54,52 @@ header {
       color: #333;
       font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
       margin-top: 15px;
-      padding-left: 2px;
+    }
+
+    h1, p {
+      position: relative;
+      left: 45px;
+      top: 30px;
+    }
+
+    p {
+      left: 50px;
+    }
+  }
+
+  .sidebar-footer {
+    position: fixed;
+    left: 0;
+    right: calc(80% + 50px);
+    bottom: 0;
+    border-top: 1px solid #eee;
+    margin-right: 15px;
+    height: 120px;
+    overflow: hidden;
+
+    .info {
+      position: relative;
+      top: 50px;
+      text-align: center;
+      font-size: 16px;
+      font-family: "SF Pro Display";
+      font-variant: small-caps;
+      cursor: pointer;
+
+      &:hover {
+        color: #555;
+      }
+
+      &:active {
+        color: #888;
+      }
     }
   }
 
   .main {
+    position: relative;
     flex-grow: 4;
+    z-index: 1;
+    background-color: #fdfdfd;
   }
 }
