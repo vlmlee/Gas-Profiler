@@ -29,8 +29,8 @@ export default function Contract({ contract }: {contract: Contract}) {
 
     return <div className="contract-container">
         <div className="contract-header">
-            <span>{contract.name}</span> <span className={"separator"}>|</span>
-            <span>{numberOfLines - 1} lines</span> <span className={"separator"}>|</span>
+            <span>{contract.name}.sol</span> <span className={"separator"}>|</span>
+            <span>{numberOfLines - 1} Lines</span> <span className={"separator"}>|</span>
             <span> KB</span>
             <img className={"trash-icon"} src={"/delete-10400.svg"}></img>
         </div>

@@ -11,6 +11,7 @@
     font-size: 13px;
     font-weight: 600;
     color: #333;
+    box-shadow: 0 5px 3px -3px #f8f8f8;
 
     span.separator {
         margin: 0 15px;
@@ -42,6 +43,7 @@
 
 .contract-contents-container {
     font-size: 12px;
+    margin-top: 5px;
 }
 
 .contract-contents-container pre {
