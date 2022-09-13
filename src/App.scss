@@ -11,16 +11,53 @@ header {
     display: inline-block;
     margin: 0;
     float: left;
-    font-size: 48px;
+    font-size: 52px;
+    color: #333;
+    font-family: "New York Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   }
 
   input[name="file"] {
+    position: relative;
     float: right;
+    top: 35px;
   }
 
   .button {
     display: inline-block;
     position: relative;
     float: right;
+    top: 25px;
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+
+  .sidebar {
+    flex-grow: 1;
+    border-right: 1px solid #eee;
+    overflow: scroll;
+    box-shadow: 0 0 4px 0 #eee;
+    padding-top: 30px;
+    padding-left: 45px;
+
+    h1 {
+      font-size: 24px;
+      font-family: "New York Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      margin-top: 15px;
+      padding-left: 2px;
+    }
+  }
+
+  .main {
+    flex-grow: 4;
   }
 }

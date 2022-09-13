@@ -143,16 +143,26 @@ function App() {
     
     return (
         <div className="App">
-            <header>
-                <h1 className="title">Gas Profiler</h1>
-                <Button onClick={uploadFile}>load contracts</Button>
-                <input type="file" name="file" id={"file"} />
-            </header>
-            <div>
-                {contracts.map((contract, index) => <Contract key={index} contract={contract}/>)}
+            <div className={"sidebar"}>
+                <h1>Loaded files</h1>
+                <p>AccessControl.sol</p>
+                <p>AccessControl.sol</p>
+                <p>AccessControl.sol</p>
+            </div>
+            <div className={"main"}>
+                <header>
+                    <h1 className="title">Gas Profiler</h1>
+                    <Button onClick={uploadFile}>load contracts</Button>
+                    <input type="file" name="file" id={"file"} />
+                </header>
+                <div>
+                    {contracts.length > 0 ?
+                        contracts.map((contract, index) => <Contract key={index} contract={contract}/>)
+                        : <div>Upload a contract</div>}
+                </div>
             </div>
         </div>
-);
+    );
 }
 
 export default App;
