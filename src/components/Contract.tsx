@@ -19,7 +19,7 @@ export default function Contract({ contract }: {contract: Contract}) {
     const renderRows = () => {
         let rows = [];
         for (let i = 0; i < numberOfLines; i++) {
-            rows.push(<div className="contract-lines">
+            rows.push(<div key={i} className="contract-lines">
                 <div className="contract-line-number">{i}</div>
                 <div className="contract-line">{lines[i]}</div>
             </div>);
@@ -32,6 +32,7 @@ export default function Contract({ contract }: {contract: Contract}) {
             <span>{contract.name}.sol</span> <span className={"separator"}>|</span>
             <span>{numberOfLines - 1} Lines</span> <span className={"separator"}>|</span>
             <span> KB</span>
+            <span className={"address"}>address</span>
             <img className={"trash-icon"} src={"/delete-10400.svg"}></img>
         </div>
         <div className="contract-contents-container">
