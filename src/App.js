@@ -1,14 +1,13 @@
 import './App.scss';
-import {useState} from "react";
-import Contract from "./components/Contract";
-import {ethers} from "ethers";
-import Button from "./components/Button";
+import { useState } from 'react';
+import Contract from './components/Contract';
+import Button from './components/Button';
 
 function App() {
-    
+
     const [contracts, setContracts] = useState([
         {
-            name: "AccessControl",
+            name: 'AccessControl',
             contents: `// SPDX-License-Identifier: MIT
     pragma solidity ^0.8.0;
 
@@ -131,36 +130,37 @@ function App() {
                 emit RoleRevoked(role, account, _msgSender());
             }
         }
-    }`},
+    }`
+        }
     ]);
-    
+
     const uploadFile = () => {
-        let file = document.getElementById("file").files[0];
+        let file = document.getElementById('file').files[0];
         let formData = new FormData();
-        formData.append("file", file)
-        fetch('/upload-contract', {method: "POST", body: formData});
-    }
-    
+        formData.append('file', file);
+        fetch('/upload-contract', { method: 'POST', body: formData });
+    };
+
     return (
-        <div className="App">
-            <div className={"sidebar"}>
+        <div className='App'>
+            <div className={'sidebar'}>
                 <h1>Loaded files</h1>
                 <p>AccessControl.sol</p>
                 <p>AccessControl.sol</p>
                 <p>AccessControl.sol</p>
-                <div className={"sidebar-footer"}>
-                    <div className={"info"}>info</div>
+                <div className={'sidebar-footer'}>
+                    <div className={'info'}>info</div>
                 </div>
             </div>
-            <div className={"main"}>
+            <div className={'main'}>
                 <header>
-                    <h1 className="title">Gas Profiler</h1>
+                    <h1 className='title'>Gas Profiler</h1>
                     <Button onClick={uploadFile}>load contracts</Button>
-                    <input type="file" name="file" id={"file"} />
+                    <input type='file' name='file' id={'file'} />
                 </header>
                 <div>
                     {contracts.length > 0 ?
-                        contracts.map((contract, index) => <Contract key={index} contract={contract}/>)
+                        contracts.map((contract, index) => <Contract key={index} contract={contract} />)
                         : <div>Upload a contract</div>}
                 </div>
             </div>

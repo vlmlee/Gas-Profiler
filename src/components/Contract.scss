@@ -1,82 +1,82 @@
 .contract-container {
-    width: 80%;
-    margin: 30px auto;
-    text-align: left;
-    border: 1px solid #ddd;
+  width: 80%;
+  margin: 30px auto;
+  text-align: left;
+  border: 1px solid #ddd;
 }
 
 .contract-header {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 15px 15px 28px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #202122;
-    box-shadow: 0 5px 3px -3px #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 15px 15px 28px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #202122;
+  box-shadow: 0 5px 3px -3px #f8f8f8;
 
-    span.separator {
-        margin: 0 15px;
-        font-weight: lighter;
-        color: #ccc;
-    }
+  span.separator {
+    margin: 0 15px;
+    font-weight: lighter;
+    color: #ccc;
+  }
 
-    .trash-icon {
-        float: right;
-        position: relative;
-        right: -6px;
-        bottom: 7px;
-        height: 16px;
-        border: 1px solid #ccc;
-        padding: 6px;
-        border-radius: 3px;
+  .trash-icon {
+    float: right;
+    position: relative;
+    right: -6px;
+    bottom: 7px;
+    height: 16px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 3px;
 
-        &:hover {
-            border: 1px solid #ccc;
-            background-color: #ddd;
-        }
-
-        &:active {
-            border: 1px solid #ccc;
-            background-color: #ddd;
-        }
-    }
-}
-
-.contract-contents-container {
-    font-size: 12px;
-    padding: 5px 0;
-}
-
-.contract-contents-container pre {
-    margin: 0;
-}
-
-.contract-lines {
     &:hover {
-        background-color: #ddd;
+      border: 1px solid #ccc;
+      background-color: #ddd;
     }
 
     &:active {
-        background-color: #eee;
+      border: 1px solid #ccc;
+      background-color: #ddd;
     }
+  }
+}
+
+.contract-contents-container {
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+.contract-contents-container pre {
+  margin: 0;
+}
+
+.contract-lines {
+  &:hover {
+    background-color: #ddd;
+  }
+
+  &:active {
+    background-color: #eee;
+  }
 }
 
 .contract-line, .contract-line-number {
-    display: inline-block;
-    padding: 3px 5px;
+  display: inline-block;
+  padding: 3px 5px;
 }
 
 .contract-line-number {
-    color: #777;
-    border-right: 1px solid #ddd;
-    min-width: 30px;
-    width: fit-content;
-    text-align: right;
+  color: #777;
+  border-right: 1px solid #ddd;
+  min-width: 30px;
+  width: fit-content;
+  text-align: right;
 }
 
 .contract-line {
-    color: #202122;
+  color: #202122;
 }
 
 .contract-container .button {
-    float: right;
+  float: right;
 }

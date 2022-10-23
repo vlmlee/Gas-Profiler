@@ -1,8 +1,8 @@
 // @ts-ignore
-import { ethers } from "hardhat";
+import { ethers } from 'hardhat';
 
 async function main() {
-    const Test = await ethers.getContractFactory("TestContract");
+    const Test = await ethers.getContractFactory('TestContract');
     const test = await Test.deploy();
 
     await test.deployed();
