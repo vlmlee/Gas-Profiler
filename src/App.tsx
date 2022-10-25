@@ -4,22 +4,31 @@ import Button from './components/Button';
 import MOCK_CONTRACT from './mocks/MockContract';
 import Contract, { IContract } from './components/Contract';
 import React from 'react';
+import getByteSize from './helpers/getByteSize';
+import byteSize from './helpers/getByteSize';
 
 function App() {
-    const [contracts, setContracts] = useState([
-        {
-            name: 'AccessControl',
-            contents: MOCK_CONTRACT,
-            size: 0,
-            address: ''
-        }
-    ]);
+    const [contract, setContract] = useState({
+        name: 'AccessControl',
+        contents: MOCK_CONTRACT,
+        size: 0,
+        address: ''
+    });
 
     const uploadFile = () => {
         let file = (document.getElementById('file') as any).files[0];
         let formData = new FormData();
         formData.append('file', file);
-        fetch('/upload-contract', { method: 'POST', body: formData });
+        fetch('/upload-contract', { method: 'POST', body: formData })
+            .then(res => res.json())
+            .then((res: any) => {
+                setContract(prev => {
+                    return {
+                        ...prev,
+                        contents: res
+                    };
+                });
+            });
     };
 
     return (
@@ -37,11 +46,8 @@ function App() {
                     </label>
                 </header>
                 <div>
-                    {contracts.length > 0 &&
-                        contracts.map((contract: IContract, index: number) => (
-                            <Contract key={index} contract={contract} />
-                        ))}
-                    {contracts.length === 0 && <div>Upload a contract</div>}
+                    {contract && <Contract key={contract.name} contract={contract} />}
+                    {!contract && <div>Upload a contract</div>}
                 </div>
             </main>
         </div>
