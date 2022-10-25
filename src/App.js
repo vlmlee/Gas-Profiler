@@ -29,7 +29,9 @@ function App() {
             <main id={'main'}>
                 <header>
                     <Button onClick={uploadFile}>load contract</Button>
-                    <input type="file" name="file" id={'file'} />
+                    <label className={'main__upload-file'}>
+                        <input type="file" name="file" id={'file'} /> upload file
+                    </label>
                 </header>
                 <div>
                     {contracts.length > 0 ? (
