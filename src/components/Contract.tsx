@@ -37,7 +37,7 @@ export default function Contract({ contract }: { contract: IContract }) {
                 <img className={'trash-icon'} src={'/delete-10400.svg'}></img>
             </div>
             <div className="contract__contents__container">
-                <pre>{renderRows()}</pre>
+                <pre className={'contract__contents'}>{renderRows()}</pre>
             </div>
         </div>
     );

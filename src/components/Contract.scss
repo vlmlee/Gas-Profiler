@@ -41,7 +41,7 @@
         font-size: 12px;
         position: relative;
 
-        pre {
+        .contract__contents {
             position: relative;
             margin: 0;
 
@@ -70,18 +70,18 @@
                     text-align: right;
                 }
             }
-        }
 
-        pre:before {
-            content: '';
-            background-color: #555;
-            opacity: 0.2;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 0;
+            &:before {
+                content: '';
+                background-color: #555;
+                opacity: 0.2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+            }
         }
     }
 }
