@@ -45,10 +45,6 @@
 
     pre {
         position: relative;
-
-        &:last-child {
-            padding-bottom: 5px;
-        }
     }
 
     pre:before {
@@ -76,10 +72,6 @@
     &:active {
         background-color: #555;
     }
-}
-
-.contract-line:first-of-type {
-    padding-top: 5px;
 }
 
 .contract-line,

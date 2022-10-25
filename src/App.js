@@ -22,9 +22,11 @@ function App() {
     return (
         <div className="App">
             <div className={'sidebar'}>
-                <div className={'sidebar__title'}>Solidity Gas Profiler</div>
+                <div className={'sidebar__title'}>
+                    <div className={'sidebar__icon'}></div> Solidity Gas Profiler
+                </div>
             </div>
-            <div className={'main'}>
+            <main id={'main'}>
                 <header>
                     <Button onClick={uploadFile}>load contract</Button>
                     <input type="file" name="file" id={'file'} />
@@ -36,7 +38,7 @@ function App() {
                         <div>Upload a contract</div>
                     )}
                 </div>
-            </div>
+            </main>
         </div>
     );
 }
