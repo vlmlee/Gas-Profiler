@@ -36,16 +36,19 @@ header {
 .App {
     display: flex;
     flex-direction: row;
+    font-size: 14px;
 
     .sidebar {
-        flex-grow: 1;
+        flex-grow: 2;
         border-right: 1px solid #eee;
         overflow-y: scroll;
         overflow-x: hidden;
-        box-shadow: 0 0 4px 0 #eee;
         position: relative;
         z-index: 0;
         color: white;
+        font-size: 13px;
+        font-weight: bold;
+
         -ms-overflow-style: none;
         scrollbar-width: none;
 
@@ -53,29 +56,10 @@ header {
             display: none;
         }
 
-        h1 {
-            font-size: 24px;
-            font-family: 'New York Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
-                'Apple Color Emoji', 'Segoe UI Emoji';
-        }
-
-        p {
-            font-size: 14px;
-            font-weight: 500;
-            font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
-                'Apple Color Emoji', 'Segoe UI Emoji';
-            margin-top: 15px;
-        }
-
-        h1,
-        p {
+        &__title {
+            text-align: center;
             position: relative;
-            left: 60px;
-            top: 105px;
-        }
-
-        p {
-            left: 63px;
+            top: 124px;
         }
     }
 
@@ -110,7 +94,7 @@ header {
 
     .main {
         position: relative;
-        flex-grow: 4;
+        flex-grow: 6;
         z-index: 1;
         background-color: #202122;
         color: white;

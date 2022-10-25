@@ -21,7 +21,9 @@ function App() {
 
     return (
         <div className="App">
-            <div className={'sidebar'}></div>
+            <div className={'sidebar'}>
+                <div className={'sidebar__title'}>Solidity Gas Profiler</div>
+            </div>
             <div className={'main'}>
                 <header>
                     <Button onClick={uploadFile}>load contract</Button>
