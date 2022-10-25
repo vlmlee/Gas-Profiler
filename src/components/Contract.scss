@@ -3,6 +3,7 @@
     margin: 30px auto;
     text-align: left;
     border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .contract-header {
@@ -40,8 +41,23 @@
 
 .contract-contents-container {
     font-size: 12px;
-    padding: 5px 0;
-    color: white;
+    position: relative;
+
+    pre {
+        position: relative;
+    }
+
+    pre:before {
+        content: '';
+        background-color: #555;
+        opacity: 0.2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
 }
 
 .contract-contents-container pre {
@@ -58,11 +74,21 @@
     }
 }
 
+.contract-line:first-of-type {
+    padding-top: 5px;
+}
+
+pre:last-child {
+    padding-bottom: 5px;
+}
+
 .contract-line,
 .contract-line-number {
     display: inline-block;
     padding: 3px 5px;
     font-weight: bold;
+    z-index: 3;
+    position: relative;
 }
 
 .contract-line-number {

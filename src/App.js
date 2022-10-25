@@ -24,7 +24,7 @@ function App() {
             <div className={'sidebar'}></div>
             <div className={'main'}>
                 <header>
-                    <Button onClick={uploadFile}>load contracts</Button>
+                    <Button onClick={uploadFile}>load contract</Button>
                     <input type="file" name="file" id={'file'} />
                 </header>
                 <div>
