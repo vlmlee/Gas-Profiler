@@ -1,97 +1,87 @@
-.contract-container {
+.contract__container {
     width: 80%;
     margin: 30px auto;
     text-align: left;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
 
-.contract-header {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 15px 15px 28px;
-    font-size: 13px;
-    font-weight: bold;
-    color: white;
-
-    span.separator {
-        margin: 0 15px;
-        font-weight: lighter;
+    .contract__header {
+        border-bottom: 1px solid #ddd;
+        padding: 15px 15px 15px 28px;
+        font-size: 13px;
+        font-weight: bold;
         color: white;
+
+        .separator {
+            margin: 0 15px;
+            font-weight: lighter;
+        }
+
+        .trash-icon {
+            float: right;
+            position: relative;
+            right: -6px;
+            bottom: 7px;
+            height: 16px;
+            border: 1px solid #ccc;
+            padding: 6px;
+            border-radius: 3px;
+
+            &:hover {
+                background-color: #555;
+            }
+
+            &:active {
+                background-color: #222;
+            }
+        }
     }
 
-    .trash-icon {
-        float: right;
+    .contract__contents__container {
+        font-size: 12px;
         position: relative;
-        right: -6px;
-        bottom: 7px;
-        height: 16px;
-        border: 1px solid #ccc;
-        padding: 6px;
-        border-radius: 3px;
 
-        &:hover {
+        pre {
+            position: relative;
+            margin: 0;
+
+            .contract__lines {
+                &:hover {
+                    background-color: #333;
+                }
+
+                &:active {
+                    background-color: #555;
+                }
+
+                .contract__line,
+                .contract__line-number {
+                    display: inline-block;
+                    padding: 3px 5px;
+                    font-weight: bold;
+                    position: relative;
+                }
+
+                .contract__line-number {
+                    color: #777;
+                    border-right: 1px solid #ddd;
+                    min-width: 30px;
+                    width: fit-content;
+                    text-align: right;
+                }
+            }
+        }
+
+        pre:before {
+            content: '';
             background-color: #555;
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
         }
-
-        &:active {
-            background-color: #222;
-        }
     }
-}
-
-.contract-contents-container {
-    font-size: 12px;
-    position: relative;
-
-    pre {
-        position: relative;
-    }
-
-    pre:before {
-        content: '';
-        background-color: #555;
-        opacity: 0.2;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-    }
-}
-
-.contract-contents-container pre {
-    margin: 0;
-}
-
-.contract-lines {
-    &:hover {
-        background-color: #333;
-    }
-
-    &:active {
-        background-color: #555;
-    }
-}
-
-.contract-line,
-.contract-line-number {
-    display: inline-block;
-    padding: 3px 5px;
-    font-weight: bold;
-    z-index: 3;
-    position: relative;
-}
-
-.contract-line-number {
-    color: #777;
-    border-right: 1px solid #ddd;
-    min-width: 30px;
-    width: fit-content;
-    text-align: right;
-    font-weight: bold;
-}
-
-.contract-container .button {
-    float: right;
 }
