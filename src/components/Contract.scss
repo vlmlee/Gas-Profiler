@@ -62,6 +62,10 @@
                     position: relative;
                 }
 
+                .contract__line {
+                    width: calc(100% - 50px);
+                }
+
                 .contract__line-number {
                     color: #777;
                     border-right: 1px solid #ddd;
