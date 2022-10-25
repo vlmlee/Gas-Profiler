@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './Contract.scss';
 
-interface Contract {
+export interface IContract {
     name: string;
     contents: string;
     size: number;
     address: string;
 }
 
-export default function Contract({ contract }: { contract: Contract }) {
+export default function Contract({ contract }: { contract: IContract }) {
     const [contractContents, setContractContents] = useState(contract.contents);
     const rawString = JSON.stringify(contractContents);
     const lines = rawString.slice(1, rawString.length - 1).split('\\n');

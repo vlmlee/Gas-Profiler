@@ -1,19 +1,22 @@
 import './App.scss';
 import { useState } from 'react';
-import Contract from './components/Contract';
 import Button from './components/Button';
 import MOCK_CONTRACT from './mocks/MockContract';
+import Contract, { IContract } from './components/Contract';
+import React from 'react';
 
 function App() {
     const [contracts, setContracts] = useState([
         {
             name: 'AccessControl',
-            contents: MOCK_CONTRACT
+            contents: MOCK_CONTRACT,
+            size: 0,
+            address: ''
         }
     ]);
 
     const uploadFile = () => {
-        let file = document.getElementById('file').files[0];
+        let file = (document.getElementById('file') as any).files[0];
         let formData = new FormData();
         formData.append('file', file);
         fetch('/upload-contract', { method: 'POST', body: formData });
@@ -34,11 +37,11 @@ function App() {
                     </label>
                 </header>
                 <div>
-                    {contracts.length > 0 ? (
-                        contracts.map((contract, index) => <Contract key={index} contract={contract} />)
-                    ) : (
-                        <div>Upload a contract</div>
-                    )}
+                    {contracts.length > 0 &&
+                        contracts.map((contract: IContract, index: number) => (
+                            <Contract key={index} contract={contract} />
+                        ))}
+                    {contracts.length === 0 && <div>Upload a contract</div>}
                 </div>
             </main>
         </div>
