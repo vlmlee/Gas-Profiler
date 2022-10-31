@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'CaskaydiaCove NF';
+    src: url('CaskaydiaCoveNerdFontCo-Regular.eot');
+    src: local('Caskaydia Cove Nerd Font Complete Windows Compatible Regular'), local('CaskaydiaCoveNerdFontCo-Regular'),
+        url('CaskaydiaCoveNerdFontCo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('CaskaydiaCoveNerdFontCo-Regular.woff2') format('woff2'),
+        url('CaskaydiaCoveNerdFontCo-Regular.woff') format('woff'),
+        url('CaskaydiaCoveNerdFontCo-Regular.ttf') format('truetype'),
+        url('CaskaydiaCoveNerdFontCo-Regular.svg#CaskaydiaCoveNerdFontCo-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CaskaydiaCove Nerd Font';
+    src: url('CaskaydiaCoveNerdFontComplete-Regular.eot');
+    src: local('Caskaydia Cove Nerd Font Complete Regular'), local('CaskaydiaCoveNerdFontComplete-Regular'),
+        url('CaskaydiaCoveNerdFontComplete-Regular.eot?#iefix') format('embedded-opentype'),
+        url('CaskaydiaCoveNerdFontComplete-Regular.woff2') format('woff2'),
+        url('CaskaydiaCoveNerdFontComplete-Regular.woff') format('woff'),
+        url('CaskaydiaCoveNerdFontComplete-Regular.ttf') format('truetype'),
+        url('CaskaydiaCoveNerdFontComplete-Regular.svg#CaskaydiaCoveNerdFontComplete-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CaskaydiaCove Nerd Font Mono';
+    src: url('CaskaydiaCoveNerdFontCompleteM-Regular.eot');
+    src: local('Caskaydia Cove Nerd Font Complete Mono Regular'), local('CaskaydiaCoveNerdFontCompleteM-Regular'),
+        url('CaskaydiaCoveNerdFontCompleteM-Regular.eot?#iefix') format('embedded-opentype'),
+        url('CaskaydiaCoveNerdFontCompleteM-Regular.woff2') format('woff2'),
+        url('CaskaydiaCoveNerdFontCompleteM-Regular.woff') format('woff'),
+        url('CaskaydiaCoveNerdFontCompleteM-Regular.ttf') format('truetype'),
+        url('CaskaydiaCoveNerdFontCompleteM-Regular.svg#CaskaydiaCoveNerdFontCompleteM-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CaskaydiaCove NF Mono';
+    src: url('CaskaydiaCoveNerdFontCo-Regular_1.eot');
+    src: local('Caskaydia Cove Nerd Font Complete Mono Windows Compatible Regular'), local('CaskaydiaCoveNerdFontCo-Regular'),
+        url('CaskaydiaCoveNerdFontCo-Regular_1.eot?#iefix') format('embedded-opentype'),
+        url('CaskaydiaCoveNerdFontCo-Regular_1.woff2') format('woff2'),
+        url('CaskaydiaCoveNerdFontCo-Regular_1.woff') format('woff'),
+        url('CaskaydiaCoveNerdFontCo-Regular_1.ttf') format('truetype'),
+        url('CaskaydiaCoveNerdFontCo-Regular_1.svg#CaskaydiaCoveNerdFontCo-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
